@@ -4,8 +4,7 @@ window.onload = function () {
   $("#spinner").show(); //shows loader
   changeTheme(localStorage.getItem("darkMode")); //select theme
   const urlParams = new URLSearchParams(window.location.search);
-
-  const searchQuery = urlParams.get("search");
+  const gameScore = urlParams.get("score");
 
   saveViewCount(); // save page views
 
@@ -19,6 +18,10 @@ window.onload = function () {
         config = responseJSON;
         getSessionCount();
       });
+  } else if (window.location.pathname === "/result.html") {
+    $(document).ready(function () {
+      $("h1#score").text(gameScore);
+    });
   } else if (window.location.pathname === "/pages/404.html") {
     window.location.replace("https://www.downtok.in");
   }
