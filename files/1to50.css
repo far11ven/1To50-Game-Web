@@ -387,9 +387,7 @@ table {
   border-radius: 5px;
 }
 .topInfo #time {
-  float: left;
   font-size: 30px;
-  width: 100px;
   font-weight: 700;
   font-family: Arial, AppleGothic, sans-serif;
   line-height: 50px;

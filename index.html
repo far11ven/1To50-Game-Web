@@ -39,10 +39,10 @@
 <body>
 	<div class="wrap">
 		<div class="headerFix">
-			<div>
+			<div class="text-center">
 				<div class="topInfo" id="mainColor">
 					<div id="time">0.000</div>
-					<div class="level">level <span id="score">1</span></div>
+					<div class="level" style="display:none;">level <span id="score">1</span></div>
 				</div>
 			</div>
 		</div>
@@ -72,7 +72,7 @@
 				</span>
 			</div>
 		</nav>
-		<div class="jumbotron text-center" style="margin-bottom: 0px; height: auto !important;">
+		<div class="jumbotron text-center">
 			<div class="stage" style="height: auto !important;">
 				<div class="lineWrapB">
 					<div class="adswrap">
@@ -81,7 +81,7 @@
 						<div class="description">
 							<h1 class="title"><a href="#"><strong>1to50</strong></a></h1>
 							<p>Touch all the tiles from 1 to 50 in sequence as fast as you can.</p>
-							<a class="resetBtn" href="javascript:;">Restart</a>
+							<a class="resetBtn" href="javascript:;">Restart Game <i class="fas fa-redo-alt"></i></a>
 						</div>
 					</div>
 					<div class="grid x5" id="grid">
@@ -113,23 +113,7 @@
 					</div>
 				</div>
 				<div class="proposeFbLike">
-					<div id="social" style="padding:15px;">
-						<h5 class="dark-th" style="color: rgba(0, 0, 0, 0.5);">
-							spread the_ <i class="far fa-heart stats" style="color:red;"></i>
-							<pre> </pre>
-						</h5>
-						<h3>
-							<a class="social-link" target="_blank" href="https://www.facebook.com/downtok_app/">
-								<i class="fab fa-facebook"></i>
-							</a>
-							<a class="social-link" target="_blank" href="https://www.instagram.com/downtok_app/">
-								<i class="fab fa-instagram"></i>
-							</a>
-							<a class="social-link" target="_blank" href="https://twitter.com/downtok_app">
-								<i class="fab fa-twitter"></i></a>
-						</h3>
 
-					</div>
 				</div>
 
 
@@ -167,12 +151,31 @@
 						(adsbygoogle = window.adsbygoogle || []).push({});
 					</script>
 				</div>
+
 				<div class="promo">
 					<a href="https://www.downgram.in" target="_blank">
 						<img class="col-md-10" alt="downgram.in" src="../../assets/promo_downgram.png">
 					</a>
 				</div>
 
+
+			</div>
+
+			<div id="social" style="margin-top:50px;">
+				<h5 class="dark-th" style="color: rgba(0, 0, 0, 0.5);">
+					spread the_ <i class="far fa-heart stats" style="color:red;"></i>
+					<pre> </pre>
+				</h5>
+				<h3>
+					<a class="social-link" target="_blank" href="https://www.facebook.com/downtok_app/">
+						<i class="fab fa-facebook"></i>
+					</a>
+					<a class="social-link" target="_blank" href="https://www.instagram.com/downtok_app/">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a class="social-link" target="_blank" href="https://twitter.com/downtok_app">
+						<i class="fab fa-twitter"></i></a>
+				</h3>
 
 			</div>
 		</div>
@@ -189,6 +192,20 @@
 				location.href = '/1to50/?ts=' + (+new Date);
 			};
 		</script>
+
+		<script
+			src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=406944066536664&autoLogAppEvents=1"
+			async defer crossorigin="anonymous"> </script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+			integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+			crossorigin="anonymous"></script>
+
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+			integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+			crossorigin="anonymous"></script>
+
 </body>
 
 </html>
