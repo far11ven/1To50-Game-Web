@@ -21,6 +21,31 @@ window.onload = function () {
   } else if (window.location.pathname === "/result.html") {
     $(document).ready(function () {
       $("h1#score").text(gameScore);
+
+      //set share links
+      var instaLink = document.getElementById("insta-link");
+      instaLink.href =
+        "intent:#Intent;scheme=http;package=com.instagram.android;end";
+
+      var whatsappLink = document.getElementById("whatsapp-link");
+      whatsappLink.href =
+        "https://api.whatsapp.com/send?text=Hey%21%20I%20got%20" +
+        gameScore +
+        " seconds!%20Can%20you%20beat%20my%20score?%20try%20now%3A%20 https://www.downtok.in";
+
+      var twitterLink = document.getElementById("twitter-link");
+      twitterLink.href =
+        "https://twitter.com/share?hashtags=downtok.in&text=Hey%21+I+got+" +
+        gameScore +
+        " seconds" +
+        "%21%20Can+you+beat+my+score?+try+now+%3A https://downtok.in";
+
+      var copyLink = document.getElementById("copy-link");
+      copyLink.value =
+        "https://twitter.com/share?hashtags=downtok.in&text=Hey%21+I+got+" +
+        gameScore +
+        " seconds" +
+        "%21%20Can+you+beat+my+score?+try+now+%3A https://downtok.in";
     });
   } else if (window.location.pathname === "/pages/404.html") {
     window.location.replace("https://www.downtok.in");

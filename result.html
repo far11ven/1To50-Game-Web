@@ -2,7 +2,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Your Result: </title>
+	<title>Your score!! </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="index.js"></script>
 	<script src="pace.js"></script>
@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="togglestyle.css" />
 	<link rel="stylesheet" href="pace.css">
 	<meta name="keywords"
-		content="play Down-to-k game - 1to50, speed test, 1to50, puzzle, fun, funny puzzle, puzzle game"">
+		content="downtok, downtok.in, downtok game, play Down-to-k game - 1to50, speed test, 1to50, puzzle, fun, funny puzzle, puzzle game"">
 	<meta name=" description" content="A simple and fun to play Down-to-k game - 1to50" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -20,9 +20,8 @@
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<meta property="og:url" content="http://www.downtok.in" />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Down-to-k game - 1to50 A simple and fun to play " />
-	<meta property="og:description" content="A simple and fun to play Down-to-k game - 1to50" />
-	<meta property="og:image" content="http://www.downtok.in/assets/logo.png" />
+	<meta property="og:title" content="Down-to-k - A simple and fun to play game" />
+	<meta property="og:description" content=" 1to50 - play for free on downtok.in" />
 
 	<script src="./files/osd.js"></script>
 	<script>if (location.href.indexOf('ts=') == -1) { history.replaceState({}, 'ts', location.search + (location.search ? '&' : '?') + 'ts=' + (+new Date)); }</script>
@@ -41,7 +40,7 @@
 		<div class="headerFix">
 			<div class="text-center">
 				<div class="topInfo" id="mainColor">
-					<div id="time">Result</div>
+					<div id="time" style="display:none;">Result</div>
 					<div class="level" style="display:none;">level <span id="score">1</span></div>
 				</div>
 			</div>
@@ -57,9 +56,12 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item header"> <a class="nav-item nav-link dark-th" href="/#how-to-play"
-							style="color: rgba(0, 0, 0, 0.5);">How to
+					<li class="nav-item header"> <a class="nav-item nav-link dark-th"
+							href="https:/downtok.in/?#how-to-play" style="color: rgba(0, 0, 0, 0.5);">How to
 							play</a>
+					</li>
+					<li class="nav-item header"> <a class="nav-item nav-link dark-th" href="/pages/privacy-policy.html"
+							style="color: rgba(0, 0, 0, 0.5);">Privacy Policy</a>
 					</li>
 				</ul> <span class="navbar-text">
 					<div id="theme" class="dark-th" style="color: rgba(0, 0, 0, 0.5);">
@@ -81,7 +83,7 @@
 						<div class="description">
 							<h1 class="title"><a href="#"><strong>1to50</strong></a></h1>
 							<p>Touch all the tiles from 1 to 50 in sequence as fast as you can.</p>
-							<a class="resetBtn" href="/">Try Again</a>
+							<a class="resetBtn" href="/">Play Again</a>
 						</div>
 					</div>
 
@@ -90,6 +92,31 @@
 						<p class="title">Your score is:</p>
 						<br>
 						<h1 id="score" class="display-4"></h1>
+
+						<div id="social" style="margin-top:50px;">
+							<h5 class="dark-th" style="color: rgba(0, 0, 0, 0);">
+								Share with your friends, send an invite now:
+								<pre> </pre>
+							</h5>
+							<h3>
+
+								<a id="fb-link" class="social-link" target="_blank" href="#">
+									<i class="fab fa-facebook"></i>
+								</a>
+								<a id="insta-link" class="social-link" target="_blank" href="#">
+									<i class="fab fa-instagram"></i>
+								</a>
+								<a id="whatsapp-link" class="social-link" target="_blank" href="#">
+									<i class="fab fa-whatsapp"></i></a>
+								<a id="twitter-link" class="social-link" target="_blank" href="#">
+									<i class="fab fa-twitter"></i></a>
+								<a id="copy-link" class="social-link" target="_blank" href="#" style="display:none;">
+									<i class="fas fa-link"></i></i></a>
+
+
+							</h3>
+
+						</div>
 					</div>
 					<div class="ads" style="width: 100%; height: auto;">
 						<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -131,51 +158,70 @@
 
 
 				</div>
-
-				<div id="social" style="margin-top:50px;">
-					<h5 class="dark-th" style="color: rgba(0, 0, 0, 0.5);">
-						spread the_ <i class="far fa-heart stats" style="color:red;"></i>
-						<pre> </pre>
-					</h5>
-					<h3>
-						<a class="social-link" target="_blank" href="https://www.facebook.com/downtok_app/">
-							<i class="fab fa-facebook"></i>
-						</a>
-						<a class="social-link" target="_blank" href="https://www.instagram.com/downtok_app/">
-							<i class="fab fa-instagram"></i>
-						</a>
-						<a class="social-link" target="_blank" href="https://twitter.com/downtok_app">
-							<i class="fab fa-twitter"></i></a>
-					</h3>
-
-				</div>
 			</div>
+		</div>
+	</div>
 
-			<footer class="footer">
-				<div class="footer-container"> <span class="text-muted">© 2019-20 Downtok.in</span>
-				</div>
-			</footer>
+	<footer class="footer">
+		<div class="footer-container"> <span class="text-muted">© 2019-20 Downtok.in</span>
+		</div>
+	</footer>
 
-			<script type="text/javascript" src="./files/jquery.cookie.min.js"></script>
-			<script>
-				var changeLang = function (lang) {
-					$.cookie('lang', lang, { path: '/' });
-					location.href = '/1to50/?ts=' + (+new Date);
-				};
-			</script>
-
-			<script
-				src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=406944066536664&autoLogAppEvents=1"
-				async defer crossorigin="anonymous"> </script>
+	<script
+		src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=485767238662165&autoLogAppEvents=1"
+		async defer crossorigin="anonymous"> </script>
 
 
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
-				integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
-				crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+		integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+		crossorigin="anonymous"></script>
 
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
-				integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
-				crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+		integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+		crossorigin="anonymous"></script>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ca77dda4474e9f4"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+
+			$('#fb-link').click(function (e) {
+				e.preventDefault();
+				const urlParams = new URLSearchParams(window.location.search);
+				var gameScore = urlParams.get("score");
+				FB.ui(
+					{
+						method: 'feed',
+						name: 'https://www.downtok.in',
+						link: 'https://downtok.in ',
+						picture: "https://downtok.in/assets/logo.png",
+						caption: 'play 1to',
+						description: 'Can you beat My score!!',
+						message: 'I got ' + gameScore + "Seconda!"
+					}
+				);
+			});
+
+			$('#copy-link').click(function (e) {
+				/* Get the text field */
+				var copyText = document.getElementById("copy-link").value;
+
+				/* Select the text field */
+				copyText.select();
+				copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+				/* Copy the text inside the text field */
+				document.execCommand("copy");
+
+				/* Alert the copied text */
+				alert("Copied the text: " + copyText.value);
+			});
+		});
+	</script>
 
 </body>
 
