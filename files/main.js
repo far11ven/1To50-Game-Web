@@ -69,12 +69,12 @@ $(function () {
         });
     },
     c = function () {
-      clearInterval(l), saveSessionDetails(), redirectResultPage(resultTime);
+      clearInterval(l), saveSessionDetails(resultTime);
     };
   (location.hash = ""), s(), n();
 });
 
-function saveSessionDetails() {
+function saveSessionDetails(resultTime, t) {
   let sessionBody = { name: "Anon", score: resultTime, channelType: "web" };
 
   fetch("https://prod.downgram.in/api/downtok-game/savesession", {
@@ -87,10 +87,12 @@ function saveSessionDetails() {
   })
     .then((response) => response.json())
     .then((responseJson) => {
+      redirectResultPage(resultTime);
       $("#spinner").hide(); //hides loader
     })
     .catch((err) => {
       console.log("err", err);
+      redirectResultPage(resultTime);
       $("#spinner").hide(); //hides loader
     });
 }
