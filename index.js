@@ -56,7 +56,6 @@ window.onload = function () {
       $("button.share-btn").click(function () {
         switch (this.id) {
           case "whatsapp-link":
-            alert("clicked");
             window.open(whatsappLink);
             break;
           case "twitter-link":
