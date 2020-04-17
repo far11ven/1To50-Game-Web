@@ -24,14 +24,39 @@
 	<meta property="og:description" content=" 1to50 - play for free on downtok.in" />
 	<meta property="og:image" content="http://www.downtok.in/assets/logo.png" />
 
-	<script src="./files/osd.js"></script>
-	<script>if (location.href.indexOf('ts=') == -1) { history.replaceState({}, 'ts', location.search + (location.search ? '&' : '?') + 'ts=' + (+new Date)); }</script>
 	<script src="./files/libs2.js"></script>
 	<script src="./files/main.js"></script>
 	<link rel="stylesheet" href="./files/1to50.css">
 	<script>
 		var level = 1;
 		var resultTime;
+	</script>
+
+	<script data-ad-client="ca-pub-1533259080190708" async
+		src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<link rel="manifest" href="manifest.json" />
+	<!-- ios support -->
+	<link rel="apple-touch-icon" href="assets/icons/icon-72x72.png" />
+	<link rel="apple-touch-icon" href="assets/icons/icon-96x96.png" />
+	<link rel="apple-touch-icon" href="assets/icons/icon-128x128.png" />
+	<link rel="apple-touch-icon" href="assets/icons/icon-144x144.png" />
+	<link rel="apple-touch-icon" href="assets/icons/icon-152x152.png" />
+	<link rel="apple-touch-icon" href="assets/icons/icon-192x192.png" />
+	<link rel="apple-touch-icon" href="assets/icons/icon-384x384.png" />
+	<link rel="apple-touch-icon" href="assets/icons/icon-512x512.png" />
+	<meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+	<meta name="theme-color" content="#db4938" />
+	<script>
+		// Registering our Service worker
+		if ("serviceWorker" in navigator) {
+
+			navigator.serviceWorker
+				.register('serviceWorker.js', { scope: './' })
+				.then(res => console.log("service worker registered"))
+				.catch(err => console.log("service worker not registered", err))
+
+		}
 	</script>
 
 </head>
@@ -161,7 +186,6 @@
 					</a>
 				</div>
 
-
 			</div>
 
 			<div id="social" style="margin-top:50px;">
@@ -196,12 +220,6 @@
 	</footer>
 
 	<script type="text/javascript" src="./files/jquery.cookie.min.js"></script>
-	<script>
-		var changeLang = function (lang) {
-			$.cookie('lang', lang, { path: '/' });
-			location.href = '/1to50/?ts=' + (+new Date);
-		};
-	</script>
 
 	<script
 		src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=406944066536664&autoLogAppEvents=1"
