@@ -46,7 +46,7 @@ window.onload = function () {
         "Can you beat my score? try now: https://downtok.in";
 
       //hide loader
-      $("h3#spinner").hide();
+      $("#spinner").hide();
       //populate score
       $("h1#score").text(gameScore);
       // set value in share input box
@@ -75,7 +75,7 @@ window.onload = function () {
 function saveViewCount() {
   let sessionBody = { channelType: "web" };
 
-  fetch("https://prod.downgram.in/api/downtok/saveviewcount", {
+  fetch("https://prod.downgram.in/api/downtok-game/saveviewcount", {
     method: "POST",
     body: JSON.stringify(sessionBody),
     headers: {
@@ -83,24 +83,7 @@ function saveViewCount() {
     },
   })
     .then((response) => response.json())
-    .then((responseJson) => {})
-    .catch((err) => {
-      console.log("err", err);
-    });
-}
-
-function getSessionCount() {
-  var url = document.getElementById("search-box").value;
-
-  fetch("https://prod.downgram.in/api/downtok/sessioncount")
-    .then((response) => response.json())
     .then((responseJson) => {
-      let totalSessions = responseJson.result.$numberDouble;
-
-      $(document).ready(function () {
-        $("span.stats").text(totalSessions);
-      });
-
       $("#spinner").hide(); //hides loader
     })
     .catch((err) => {
@@ -109,19 +92,18 @@ function getSessionCount() {
     });
 }
 
-function saveSessionDetails(url) {
-  let sessionBody = { linkURL: url, channelType: "web" };
-  $("a[title~='Host']").hide(); //hides 000webhost banner
-  fetch("https://prod.downgram.in/api/downtok/savesession", {
-    method: "POST",
-    body: JSON.stringify(sessionBody),
-    headers: {
-      Accept: "application/json, text/plain, */*",
-      "Content-Type": "application/json",
-    },
-  })
+function getSessionCount() {
+  var url = document.getElementById("search-box").value;
+
+  fetch("https://prod.downgram.in/api/downtok-game/sessioncount")
     .then((response) => response.json())
     .then((responseJson) => {
+      let totalSessions = responseJson.result.$numberDouble;
+
+      $(document).ready(function () {
+        $("span.stats").text(totalSessions);
+      });
+
       $("#spinner").hide(); //hides loader
     })
     .catch((err) => {

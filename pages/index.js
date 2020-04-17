@@ -7,14 +7,10 @@ let isFormValidated = false;
 window.onload = function () {
   changeTheme(localStorage.getItem("darkMode")); //select theme
   const urlParams = new URLSearchParams(window.location.search);
-  const userName = urlParams.get("user");
   const reportSUbmitted = urlParams.get("submit");
   formData["sender"] = "Downtok";
 
-  if (!userName) {
-    //if user is null
-    saveViewCount();
-  }
+  saveViewCount(); // save page views
 
   if (
     window.location.pathname === "/" ||
@@ -91,7 +87,7 @@ function reporter() {
 function saveViewCount() {
   let sessionBody = { channelType: "web" };
 
-  fetch("https://prod.downgram.in/api/tiktok/saveviewcount", {
+  fetch("https://prod.downgram.in/api/downtok-game/saveviewcount", {
     method: "POST",
     body: JSON.stringify(sessionBody),
     headers: {
@@ -109,7 +105,7 @@ function getSessionCount() {
   var url = document.getElementById("search-box").value;
   $("a[title~='Host']").hide(); //hides 000webhost banner
 
-  fetch("https://prod.downgram.in/api/tiktok/sessioncount")
+  fetch("https://prod.downgram.in/api/downtok-game/sessioncount")
     .then((response) => response.json())
     .then((responseJson) => {
       let totalSessions = responseJson.result.$numberDouble;
