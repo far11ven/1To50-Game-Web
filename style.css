@@ -349,191 +349,40 @@ div#highlight-results {
     margin-bottom: 10px;
 }
 
-.video_txt{
-  background: grey;
-  font-size: 15px;
-  font-family: Helvetica;
-  border-radius: 3px;
-  color: #fff !important;
-  border-radius: 4px;
-  letter-spacing: 2px;
-  line-height: 12px;
-  padding: 5px 20px;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 10px;
-}
 
 input.form-control:focus {
 outline: 0; 
 box-shadow: 0 0 0 0.05rem rgba(0,123,255,.25);
 }
 
-/* LOADER */
+/* Footer style */
 
-
-#loader-2 span{
-display: inline-block;
-width: 15px;
-height: 15px;
-border-radius: 100%;
-margin: 20px 4px;
+.footer-container {
+  font-size: 1rem!important;
+  color: #6c757d!important;
+  text-align: center!important;
+  padding: 10px;
 }
 
 
-#loader-2 span#span-1{
-background-color: #FE4469;
-}
-#loader-2 span#span-2{
-background-color: #00A3E8;
-}
-#loader-2 span#span-3{
-background-color:#2E58C8;
-}
+/* share button style */
 
-#loader-2 span#span-4{
-background-color:limegreen;
-}
-
-#loader-2 span:nth-child(1){
-animation: bounce 0.8s ease-in-out infinite;
-}
-
-#loader-2 span:nth-child(2){
-animation: bounce 0.8s ease-in-out 0.33s infinite;
-}
-
-#loader-2 span:nth-child(3){
-animation: bounce 0.8s ease-in-out 0.66s infinite;
-}
-
-#loader-2 span:nth-child(4){
-animation: bounce 0.8s ease-in-out 0.99s infinite;
-}
-
-@keyframes bounce{
-0%, 75%, 100%{
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
-}
-
-25%{
-  -webkit-transform: translateY(-20px);
-  -ms-transform: translateY(-20px);
-  -o-transform: translateY(-20px);
-  transform: translateY(-20px);
-}
-}
-
-
-/* LOADER */
-
-/* The STARTING OF MediaViewer Modal (background) */
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  padding-top: 0px;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-
-#MediaViewerModal .modal-content {
-  margin: auto;
-  background-color: rgba(0,0,0,0) !important; 
-  background-clip: padding-box;
-  border: 1px solid rgba(0,0,0,0) !important; 
-}
-
-/* Caption of Modal Image */
-#MediaViewerModal #caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Add Animation */
-#MediaViewerModal .modal-content, #caption {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-#MediaViewerModal .modal-content>img, #MediaViewerModal .modal-content>video{
-    max-width: 380px;
-    max-height: auto;
-    margin-top: 50px;
-	margin: auto;
-	display: block;
-}
-
-
-/* The Close Button */
-
-#MediaViewerModal .close{
-    color: white;
-	float: right;
-}
-
-.close:hover,
-.close:focus {
-  color: #007bf4;
-  text-decoration: none;
+.share-btn {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
   cursor: pointer;
 }
 
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+/* Darker background on mouse-over */
+.share-btn:hover {
+  background-color: #55f;
 }
 
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-  .modal-content {
-    width: 100%;
-  }
-}
-
-/* ending of ImageViewr Modal */
-
-
-/* Radio button style */
-.radio-btn {
-    margin-bottom: 0.5rem;
-}
-
-.radio-btn label {
-    font-size: 1.1em ;
-    font-weight: bold;
-    color: #00A3E8;
-}
-
-.radio-btn label:hover {
-    color: #007bf4;
-}
-
-.radio-btn input[type="radio"]:checked+label {
-    color: #007bf4;
+input#share-link {
+  font-size: 15px;
 }
 
 /* 404.html style */
@@ -553,16 +402,3 @@ border:3px solid #007bff;
 
 }
 
-img.giphy-tuts{
-  width: 20rem;
-  margin-bottom: 2rem;
-}
-
-
-/* Footer style */
-.footer-container {
-    font-size: 1rem!important;
-    color: #6c757d!important;
-    text-align: center!important;
-    padding: 10px;
-}

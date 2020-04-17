@@ -58,8 +58,8 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item header"> <a class="nav-item nav-link dark-th"
-							href="https:/downtok.in/?#how-to-play" style="color: rgba(0, 0, 0, 0.5);">How to
+					<li class="nav-item header"> <a class="nav-item nav-link dark-th" href="/#how-to-play"
+							style="color: rgba(0, 0, 0, 0.5);">How to
 							play</a>
 					</li>
 					<li class="nav-item header"> <a class="nav-item nav-link dark-th" href="/pages/privacy-policy.html"
@@ -93,27 +93,35 @@
 					<div id="results">
 						<p class="title">Your score is:</p>
 						<br>
+						<h3 id="spinner" class="display-4"><i class="fas fa-cog fa-spin"></i></h3>
 						<h1 id="score" class="display-4"></h1>
 
 						<div id="social" style="margin-top:50px;">
-							<h5 class="dark-th" style="color: rgba(0, 0, 0, 0);">
-								Share with your friends, send an invite now:
-								<pre> </pre>
+							<h5 style="color: rgba(0, 0, 0, 0.5);">
+								Share your score with your friends now:
+
 							</h5>
 							<h3>
 
-								<a id="fb-link" class="social-link" target="_blank" href="#">
+								<button id="fb-link" class="share-btn">
 									<i class="fab fa-facebook"></i>
-								</a>
-								<a id="insta-link" class="social-link" target="_blank" href="#">
+								</button>
+								<button id="insta-link" class="share-btn" style="display:none;">
 									<i class="fab fa-instagram"></i>
-								</a>
-								<a id="whatsapp-link" class="social-link" target="_blank" href="#">
-									<i class="fab fa-whatsapp"></i></a>
-								<a id="twitter-link" class="social-link" target="_blank" href="#">
-									<i class="fab fa-twitter"></i></a>
-								<a id="copy-link" class="social-link" target="_blank" href="#" style="display:none;">
-									<i class="fas fa-link"></i></i></a>
+								</button>
+								<button id="whatsapp-link" class="share-btn">
+									<i class="fab fa-whatsapp"></i>
+								</button>
+								<button id="twitter-link" class="share-btn">
+									<i class="fab fa-twitter"></i>
+								</button>
+								<pre> </pre>
+								<h5> or, Copy following link:</h5>
+
+								<input id="share-link" type="text" />
+								<button id="copy-link" class="share-btn">
+									<i class="fas fa-link"></i>
+								</button>
 
 
 							</h3>
@@ -121,35 +129,7 @@
 						</div>
 					</div>
 					<div class="ads" style="width: 100%; height: auto;">
-						<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-						<!-- web_downtok_bottom_banner_ad -->
-						<ins class="adsbygoogle adsbygoogle-noablate"
-							style="display: block; transition: none 0s ease 0s; outline: none; border: none; padding: 0px; border-spacing: 0px; z-index: auto; height: 105px;"
-							data-ad-client="ca-pub-1533259080190708" data-ad-slot="3380181545" data-ad-format="auto"
-							data-full-width-responsive="true" data-adsbygoogle-status="done"
-							data-overlap-observer-io="false"><ins id="aswift_0_expand"
-								style="display: none; border: none; height: 342px; margin: 0px; padding: 0px; position: relative; visibility: visible; width: 411px; background-color: transparent;"><ins
-									id="aswift_0_anchor"
-									style="display:block;border:none;height:342px;margin:0;padding:0;position:relative;visibility:visible;width:411px;background-color:transparent;"><iframe
-										width="411" height="342" frameborder="0" marginwidth="0" marginheight="0"
-										vspace="0" hspace="0" allowtransparency="true" scrolling="no"
-										allowfullscreen="true"
-										onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}"
-										id="aswift_0" name="aswift_0"
-										style="left: 0px; position: absolute; top: 0px; border: 0px; width: 411px; height: 342px; overflow: visible;"></iframe></ins></ins><ins
-								id="aswift_2_expand"
-								style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:706px;background-color:transparent;"><ins
-									id="aswift_2_anchor"
-									style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:706px;background-color:transparent;"><iframe
-										width="706" height="280" frameborder="0" marginwidth="0" marginheight="0"
-										vspace="0" hspace="0" allowtransparency="true" scrolling="no"
-										allowfullscreen="true"
-										onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}"
-										id="aswift_2" name="aswift_2"
-										style="left: 0px; position: absolute; top: 0px; border: 0px; width: 706px; height: 280px; overflow: visible;"></iframe></ins></ins></ins>
-						<script>
-							(adsbygoogle = window.adsbygoogle || []).push({});
-						</script>
+
 					</div>
 
 					<div class="promo">
@@ -206,21 +186,6 @@
 						message: 'I got ' + gameScore + "Seconda!"
 					}
 				);
-			});
-
-			$('#copy-link').click(function (e) {
-				/* Get the text field */
-				var copyText = document.getElementById("copy-link").value;
-
-				/* Select the text field */
-				copyText.select();
-				copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-				/* Copy the text inside the text field */
-				document.execCommand("copy");
-
-				/* Alert the copied text */
-				alert("Copied the text: " + copyText.value);
 			});
 		});
 	</script>
