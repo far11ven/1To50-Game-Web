@@ -12,23 +12,13 @@ window.onload = function () {
 
   saveViewCount(); // save page views
 
-  if (
-    window.location.pathname === "/" ||
-    window.location.pathname === "/index.html"
-  ) {
-    fetch("config.json")
-      .then((response) => response.json())
-      .then((responseJSON) => {
-        config = responseJSON;
-        getSessionCount();
-      });
-  } else {
-    $('a[href="' + window.location.pathname + '"]')
-      .parents("li") //variations ("li,ul")
-      .addClass("active");
+  if (window.location.pathname === "/pages/leaderboard.html") {
+    getLeaderboardData();
   }
 
-  $("a[title~='Host']").hide();
+  $('a[href="' + window.location.pathname + '"]')
+    .parents("li") //variations ("li,ul")
+    .addClass("active");
 };
 
 function handleFormInput(e) {
@@ -51,7 +41,6 @@ function reporter() {
   console.log("formData : ", formData);
 
   let requestBody = formData;
-
   fetch("https://prod.downgram.in/api/issuereporter", {
     method: "POST",
     body: JSON.stringify(requestBody),
@@ -102,9 +91,6 @@ function saveViewCount() {
 }
 
 function getSessionCount() {
-  var url = document.getElementById("search-box").value;
-  $("a[title~='Host']").hide(); //hides 000webhost banner
-
   fetch("https://prod.downgram.in/api/downtok-game/sessioncount")
     .then((response) => response.json())
     .then((responseJson) => {
@@ -122,6 +108,39 @@ function getSessionCount() {
     });
 }
 
+function getLeaderboardData() {
+  fetch("https://prod.downgram.in/api/downtok-game/scores")
+    .then((response) => response.json())
+    .then((responseJson) => {
+      let highScores = responseJson.result;
+
+      document.getElementById("all-time-highest-score").innerHTML =
+        highScores.allTimeHighest[0].score.$numberDouble;
+      document.getElementById("all-time-highest-name").innerHTML =
+        highScores.allTimeHighest[0].name;
+      document.getElementById("today-highest-score").innerHTML =
+        highScores.todayHighest[0].score.$numberDouble;
+      document.getElementById("today-highest-name").innerHTML =
+        highScores.todayHighest[0].name;
+
+      document.getElementById("this-week-highest-score").innerHTML =
+        highScores.thisWeekHighest[0].score.$numberDouble;
+      document.getElementById("this-week-highest-name").innerHTML =
+        highScores.thisWeekHighest[0].name;
+      document.getElementById("this-month-highest-score").innerHTML =
+        highScores.thisMonthHighest[0].score.$numberDouble;
+      document.getElementById("this-month-highest-name").innerHTML =
+        highScores.thisMonthHighest[0].name;
+
+      document.querySelectorAll("#spinner").forEach(function (el) {
+        el.style.display = "none";
+      });
+    })
+    .catch((err) => {
+      console.log("err", err);
+    });
+}
+
 function themeSelection() {
   let isSelected = document.getElementById("theme-toggle").checked;
 
@@ -132,11 +151,11 @@ function themeSelection() {
 function changeTheme(userPref) {
   $(document).ready(function () {
     if (userPref === "true") {
-      $("body").css("background-image", "url(../assets/black_nature.jpg)");
+      $("body").css("background-color", "#12253c");
       $(".dark-th").css("color", "#ffffff");
       $("#theme-toggle").prop("checked", true);
     } else {
-      $("body").css("background-image", "url(../assets/white_nature.jpg)");
+      $("body").css("background-color", "#ecf0f3");
       $(".dark-th").css("color", "rgba(0,0,0,.5)");
       $("#theme-toggle").prop("checked", false);
     }

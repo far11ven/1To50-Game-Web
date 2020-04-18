@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Down-to-k - Not Found</title>
+  <title>Down-to-k - Higheset Scores</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="index.js"></script>
   <script src="../../pace.js"></script>
@@ -69,12 +69,52 @@
     </nav>
 
     <div class="jumbotron jumbotron-fluid">
-      <div class="container col-md-12">
-        <img src="../../assets/404.jpg" class=" col-md-12" alt="That's a 404!!">
-        <p class="lead dark-th">
-          <a class="btn btn-default back-to-home" href="/" role="button">Take me home <i class="fas fa-paw"></i></a>
-        </p>
+      <div class="container text-center col-md-12 col-sm-12 col-xs-12">
 
+        <div class="row m-2">
+          <div class="card border-success ">
+            <img class="card-img" src="/assets/confetti.jpg" alt="Card image">
+            <div class="card-img-overlay">
+              <h3 class="card-title text-danger">All Time Best</h5>
+                <h2 id="all-time-highest-score" class="display-4 text-center"></h2>
+                <h3 id="spinner" class="display-4"><i class="fas fa-cog fa-spin"></i></h3>
+                <p class="card-text"><small id="all-time-highest-name" class="text-muted"></small></p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row m-2">
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <div class="card border-primary mb-3" style="max-width: 18rem;">
+              <div class="card-header text-white  bg-primary">Today's Best</div>
+              <div class="card-body">
+                <h4 id="today-highest-score" class="card-title"></h4>
+                <h3 id="spinner" class="display-4"><i class="fas fa-cog fa-spin"></i></h3>
+                <p class="card-text"><small id="today-highest-name" class="text-muted"></small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <div class="card border-danger mb-3" style="max-width: 18rem;">
+              <div class="card-header text-white bg-danger">This Week's Best</div>
+              <div class="card-body">
+                <h4 id="this-week-highest-score" class="card-title"></h4>
+                <h3 id="spinner" class="display-4"><i class="fas fa-cog fa-spin"></i></h3>
+                <p class="card-text"><small id="this-week-highest-name" class="text-muted"></small></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-4">
+            <div class="card  border-warning mb-3" style="max-width: 18rem;">
+              <div class="card-header text-white bg-warning">This Month's Best</div>
+              <div class="card-body">
+                <h4 id="this-month-highest-score" class="card-title"></h4>
+                <h3 id="spinner" class="display-4"><i class="fas fa-cog fa-spin"></i></h3>
+                <p class="card-text"><small id="this-month-highest-name" class="text-muted"></small></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="social" class="text-center" style="margin-top:50px;">
@@ -113,7 +153,6 @@
       <a class="footer-link" href="../../sitemap.xml">
         Sitemap
       </a>
-      <pre></pre>
       <pre></pre>
       <span class="text-muted my-10">© 2019-20 Downtok.in</span>
     </div>

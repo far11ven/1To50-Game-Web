@@ -13,20 +13,18 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://downtok.in/pages/privacy.html</loc>
-  <lastmod>2020-01-31T05:44:29+00:00</lastmod>
+  <loc>https://downtok.in/pages/leaderboard.html</loc>
+  <lastmod>2020-04-18T05:44:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://downtok.in/pages/getting-started.html</loc>
-  <lastmod>2020-01-31T05:44:29+00:00</lastmod>
+  <loc>https://downtok.in/pages/privacy-policy.html</loc>
+  <lastmod>2020-04-18T05:44:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://downtok.in/pages/report-issue.html</loc>
-  <lastmod>2020-01-31T05:44:29+00:00</lastmod>
+   <lastmod>2020-04-18T05:44:29+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
-
 </urlset>

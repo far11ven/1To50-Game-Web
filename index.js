@@ -93,8 +93,6 @@ function saveViewCount() {
 }
 
 function getSessionCount() {
-  var url = document.getElementById("search-box").value;
-
   fetch("https://prod.downgram.in/api/downtok-game/sessioncount")
     .then((response) => response.json())
     .then((responseJson) => {
@@ -127,17 +125,17 @@ function changeTheme(userPref) {
       $(".dark-th").css("color", "#ffffff");
       $("#theme-toggle").prop("checked", true);
       if (deviceWidth < 575) {
-        $("body").css("background-image", "url(./assets/black_nature1024.jpg)");
+        $("body").css("background-color", "#12253c");
       } else {
-        $("body").css("background-image", "url(./assets/black_nature.jpg)");
+        $("body").css("background-color", "#12253c");
       }
     } else {
       $(".dark-th").css("color", "rgba(0,0,0,.5)");
       $("#theme-toggle").prop("checked", false);
       if (deviceWidth < 575) {
-        $("body").css("background-image", "url(./assets/white_nature1024.jpg)");
+        $("body").css("background-color", "#ecf0f3");
       } else {
-        $("body").css("background-image", "url(./assets/white_nature.jpg)");
+        $("body").css("background-color", "#ecf0f3");
       }
     }
   });
