@@ -77,6 +77,10 @@ $(function () {
 function saveSessionDetails(resultTime, t) {
   let sessionBody = { name: "Anon", score: resultTime, channelType: "web" };
 
+  if (document.getElementById("player-name").value) {
+    sessionBody.name = document.getElementById("player-name").value;
+  }
+
   fetch("https://prod.downgram.in/api/downtok-game/savesession", {
     method: "POST",
     body: JSON.stringify(sessionBody),
