@@ -132,6 +132,37 @@ function getLeaderboardData() {
       document.getElementById("this-month-highest-name").innerHTML =
         highScores.thisMonthHighest[0].name;
 
+      var tableBody = document.querySelector("div#top-10-scores tbody");
+      for (var i = 1; i < highScores.topTenScores.length; i++) {
+        var tr = document.createElement("tr");
+        var th = document.createElement("th");
+        th.setAttribute("scope", "row");
+        th.innerHTML = i;
+        var td1 = document.createElement("td");
+        var td2 = document.createElement("td");
+        var td3 = document.createElement("td");
+
+        var text1 = document.createTextNode(highScores.topTenScores[i].name);
+        var text2 = document.createTextNode(
+          highScores.topTenScores[i].score.$numberDouble
+        );
+        var text3 = document.createTextNode(
+          new Date(
+            parseInt(highScores.topTenScores[i].createDate.$date.$numberLong)
+          )
+        );
+
+        td1.appendChild(text1);
+        td2.appendChild(text2);
+        td3.appendChild(text3);
+        tr.appendChild(th);
+        tr.appendChild(td1);
+        tr.appendChild(td2);
+        tr.appendChild(td3);
+
+        tableBody.appendChild(tr);
+      }
+
       document.querySelectorAll("#spinner").forEach(function (el) {
         el.style.display = "none";
       });
