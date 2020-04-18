@@ -133,11 +133,11 @@ function getLeaderboardData() {
         highScores.thisMonthHighest[0].name;
 
       var tableBody = document.querySelector("div#top-10-scores tbody");
-      for (var i = 1; i < highScores.topTenScores.length; i++) {
+      for (var i = 0; i < highScores.topTenScores.length; i++) {
         var tr = document.createElement("tr");
         var th = document.createElement("th");
         th.setAttribute("scope", "row");
-        th.innerHTML = i;
+        th.innerHTML = i + 1;
         var td1 = document.createElement("td");
         var td2 = document.createElement("td");
         var td3 = document.createElement("td");
