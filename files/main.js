@@ -75,6 +75,7 @@ $(function () {
 });
 
 function saveSessionDetails(resultTime, t) {
+  $("#spinner").show();  //shows loader
   let sessionBody = { name: "Anon", score: resultTime, channelType: "web" };
 
   if (document.getElementById("player-name").value) {
