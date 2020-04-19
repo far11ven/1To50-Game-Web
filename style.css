@@ -183,8 +183,10 @@ p.desc {
   font-family: Helvetica;
 }
 
-#downloads {
-  margin-top: 1.6rem;
+div#top-10-scores {
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
 }
 
 #results {
@@ -362,6 +364,8 @@ input#share-link,
 input#player-name {
   font-size: 15px;
   padding: 4px;
+  color: black;
+  background: white;
 }
 
 /* 404.html style */

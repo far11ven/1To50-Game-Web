@@ -65,6 +65,7 @@ window.onload = function () {
             var copyText = document.getElementById("share-link");
             copyText.select();
             document.execCommand("copy");
+            $(".toast").toast("show");
             break;
         }
       });
