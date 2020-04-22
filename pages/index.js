@@ -139,6 +139,7 @@ function getLeaderboardData() {
         th.setAttribute("scope", "row");
         th.innerHTML = i + 1;
         var td1 = document.createElement("td");
+        td1.setAttribute("class", "player-name");
         var td2 = document.createElement("td");
         var td3 = document.createElement("td");
 

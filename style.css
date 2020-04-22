@@ -21,6 +21,13 @@
   #search-btn > span {
     display: none;
   }
+
+  /* laderboard table  player-name column */
+
+  .player-name {
+    max-width: 90px;
+    word-wrap: break-word;
+  }
 }
 
 body {

@@ -69,22 +69,20 @@
     </nav>
 
     <div class="jumbotron jumbotron-fluid">
-      <div class="container text-center col-md-12 col-sm-12 col-xs-12">
-        <div class="row m-2">
-
+      <div class="container col-md-12 col-sm-12 col-xs-12">
+        <div class="row text-center m-2">
           <div class="card border-info text-white">
             <img class="card-img" src="/assets/confetti.png" alt="Card image">
             <div class="card-img-overlay">
-              <h3 class="card-title text-danger">All Time Best</h5>
-                <h2 id="all-time-highest-score" class="display-4 text-center"></h2>
-                <h3 id="spinner" class="display-4"><i class="fas fa-cog fa-spin"></i></h3>
-                <p class="card-text"><small id="all-time-highest-name" class="text-muted"></small></p>
+              <h3 class="card-title text-danger">All Time Best</h3>
+              <h3 id="all-time-highest-score"></h3>
+              <h3 id="spinner" class="display-4"><i class="fas fa-cog fa-spin"></i></h3>
+              <p class="card-text"><small id="all-time-highest-name" class="text-muted"></small></p>
             </div>
           </div>
         </div>
-
         <br>
-        <div class="row m-2">
+        <div class="row text-center m-2">
           <div class="col-md-4 col-sm-4 col-xs-4">
             <div class="card border-primary mb-3" style="max-width: 18rem;">
               <div class="card-header text-white bg-primary">24 Hours' Best</div>
@@ -106,7 +104,7 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-4 col-xs-4">
-            <div class="card  border-warning mb-3" style="max-width: 18rem;">
+            <div class="card border-warning mb-3" style="max-width: 18rem;">
               <div class="card-header text-white bg-warning">This Month's Best</div>
               <div class="card-body">
                 <h4 id="this-month-highest-score" class="card-title text-warning"></h4>
@@ -116,32 +114,34 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="adswrap">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- web_downtok_top_banner_ad -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1533259080190708"
-          data-ad-slot="4358543373" data-ad-format="auto" data-full-width-responsive="true"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-      <div class="row m-4">
-        <div id="top-10-scores" class="container col-md-12">
-          <p class="title text-center">Top 10 Players:</p>
-          <table class="table table-striped border-success">
-            <thead class="thead-dark">
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Player</th>
-                <th scope="col">Time (in seconds)</th>
-                <th scope="col">Date</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-          <h3 id="spinner" class="display-4 text-center"><i class="fas fa-cog fa-spin"></i></h3>
+        <div class="row m-2">
+          <div class="adswrap">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- web_downtok_top_banner_ad -->
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-1533259080190708"
+              data-ad-slot="4358543373" data-ad-format="auto" data-full-width-responsive="true"></ins>
+            <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+        <div class="row m-1">
+          <div id="top-10-scores">
+            <p class="title text-center">Top 10 Players:</p>
+            <table class="table table-striped border-success">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Player</th>
+                  <th scope="col">Time (in seconds)</th>
+                  <th scope="col">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <h3 id="spinner" class="display-4 text-center"><i class="fas fa-cog fa-spin"></i></h3>
+          </div>
         </div>
       </div>
 
