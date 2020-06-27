@@ -112,25 +112,47 @@ function getLeaderboardData() {
   fetch("https://prod.downgram.in/api/downtok-game/scores")
     .then((response) => response.json())
     .then((responseJson) => {
+      document.querySelectorAll("#spinner").forEach(function (el) {
+        el.style.display = "none";
+      });
+
       let highScores = responseJson.result;
 
-      document.getElementById("all-time-highest-score").innerHTML =
-        highScores.allTimeHighest[0].score.$numberDouble;
-      document.getElementById("all-time-highest-name").innerHTML =
-        highScores.allTimeHighest[0].name;
-      document.getElementById("today-highest-score").innerHTML =
-        highScores.todayHighest[0].score.$numberDouble;
-      document.getElementById("today-highest-name").innerHTML =
-        highScores.todayHighest[0].name;
+      if (highScores.allTimeHighest.length > 0) {
+        document.getElementById("all-time-highest-score").innerHTML =
+          highScores.allTimeHighest[0].score.$numberDouble;
+        document.getElementById("all-time-highest-name").innerHTML =
+          highScores.allTimeHighest[0].name;
+      } else {
+        document.getElementById("all-time-highest-score").innerHTML = "-";
+      }
 
-      document.getElementById("this-week-highest-score").innerHTML =
-        highScores.thisWeekHighest[0].score.$numberDouble;
-      document.getElementById("this-week-highest-name").innerHTML =
-        highScores.thisWeekHighest[0].name;
-      document.getElementById("this-month-highest-score").innerHTML =
-        highScores.thisMonthHighest[0].score.$numberDouble;
-      document.getElementById("this-month-highest-name").innerHTML =
-        highScores.thisMonthHighest[0].name;
+      if (highScores.todayHighest.length > 0) {
+        document.getElementById("today-highest-score").innerHTML =
+          highScores.todayHighest[0].score.$numberDouble;
+        document.getElementById("today-highest-name").innerHTML =
+          highScores.todayHighest[0].name;
+      } else {
+        document.getElementById("today-highest-score").innerHTML = "-";
+      }
+
+      if (highScores.thisWeekHighest.length > 0) {
+        document.getElementById("this-week-highest-score").innerHTML =
+          highScores.thisWeekHighest[0].score.$numberDouble;
+        document.getElementById("this-week-highest-name").innerHTML =
+          highScores.thisWeekHighest[0].name;
+      } else {
+        document.getElementById("this-week-highest-score").innerHTML = "-";
+      }
+
+      if (highScores.thisMonthHighest.length > 0) {
+        document.getElementById("this-month-highest-score").innerHTML =
+          highScores.thisMonthHighest[0].score.$numberDouble;
+        document.getElementById("this-month-highest-name").innerHTML =
+          highScores.thisMonthHighest[0].name;
+      } else {
+        document.getElementById("this-month-highest-score").innerHTML = "-";
+      }
 
       var tableBody = document.querySelector("div#top-10-scores tbody");
       for (var i = 0; i < highScores.topTenScores.length; i++) {
@@ -163,10 +185,6 @@ function getLeaderboardData() {
 
         tableBody.appendChild(tr);
       }
-
-      document.querySelectorAll("#spinner").forEach(function (el) {
-        el.style.display = "none";
-      });
     })
     .catch((err) => {
       console.log("err", err);
