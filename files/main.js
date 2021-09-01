@@ -82,7 +82,7 @@ function saveSessionDetails(resultTime, t) {
     sessionBody.name = document.getElementById("player-name").value;
   }
 
-  fetch("https://prod.downgram.in/api/downtok-game/savesession", {
+  fetch("https://prod.kushalbhalaik.xyz/api/downtok-game/savesession", {
     method: "POST",
     body: JSON.stringify(sessionBody),
     headers: {
