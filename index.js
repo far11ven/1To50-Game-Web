@@ -76,7 +76,7 @@ window.onload = function () {
 function saveViewCount() {
   let sessionBody = { channelType: "web" };
 
-  fetch("https://prod.downgram.in/api/downtok-game/saveviewcount", {
+  fetch("https://prod.kushalbhalaik.xyz/api/downtok-game/saveviewcount", {
     method: "POST",
     body: JSON.stringify(sessionBody),
     headers: {
@@ -94,7 +94,7 @@ function saveViewCount() {
 }
 
 function getSessionCount() {
-  fetch("https://prod.downgram.in/api/downtok-game/sessioncount")
+  fetch("https://prod.kushalbhalaik.xyz/api/downtok-game/sessioncount")
     .then((response) => response.json())
     .then((responseJson) => {
       let totalSessions = responseJson.result.$numberDouble;
